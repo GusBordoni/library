@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="#">
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="library">
+        <!-- Bookshelf -->
+    </div>
+
+    <!-- Trigger/Open The Modal -->
+<button id="newBookBtn">NEW BOOK</button>
+
+<!-- modal -->
+<dialog id="myModal">
+    <div class="modal-content">
+    <div class="modal-title-bar"><span>Register a new book!</span><span class="close">&times;</span></div>
+    <form action="" class="formNewBook" id="newBookForm">
+        <div>
+            <label for="bTitle">Title</label>
+            <input type="text" name="bTitle" id="bTitle" required autofocus>
+        </div>
+        <div>
+            <label for="bAuthor">Author</label>
+            <input type="text" name="bAuthor" id="bAuthor" required>
+        </div>
+        <div>
+            <label for="bPages">Pages</label>
+            <input type="number" name="bPages" id="bPages" min="1" step="1" required>
+        </div>
+        <div>
+            <label for="bRead">Did you read it?</label>
+            <input type="checkbox" name="bRead" id="bRead" required>
+        </div>
+        <div id="formBtns">
+            <input id="bCancel" type="button" value="Cancel" formmethod="dialog">
+            <input id="bRegister" type="button" value="Register">
+        </div>
+    </form>
+    </div>
+</dialog>
+<!-- modal end -->
+
+    <script src="./jsi.js"></script>
+</body>
+</html>

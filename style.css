@@ -1,0 +1,179 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    font-family: Roboto;
+    font-size: 0.95rem;
+}
+:root {
+    --lib-blue: rgb(46, 128, 235);
+}
+body {
+    background-color: rgb(223, 223, 223);
+}
+/* --------------------------------------------------------- */
+/* LIBRARY */
+.library {
+    background-color: white;
+    border-radius: 15px;
+    width: 90vw;
+    height: 80vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    padding: 25px;
+    overflow: overlay;
+    margin: 10px;
+}
+.library-item {
+    background-color: #ebebeb;
+    border-radius: 15px;
+    width: 300px;
+    height: 200px;
+    padding: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: column;
+    box-shadow: 3px 3px 5px #dbdbdb;
+    position: relative;
+}
+.library-item > p:nth-of-type(1) {
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: var(--lib-blue);
+}
+.remove-btn {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    line-height: 0;
+}
+.trash {
+    width: 20px;
+    height: auto;
+    position: absolute;
+    top: 165px;
+    right: 10px;
+    line-height: 0;
+    filter: invert(77%) sepia(1%) saturate(104%) hue-rotate(33deg)
+        brightness(92%) contrast(84%);
+    cursor: pointer;
+}
+.originalRead {
+    display: flex;
+    align-items: center;
+    height: 18px;
+    width: 42%;
+    justify-content: space-between;
+}
+.read-check {
+    width: 20px;
+    cursor: pointer;
+}
+.check-green {
+    filter: invert(59%) sepia(25%) saturate(999%) hue-rotate(63deg)
+        brightness(94%) contrast(106%);
+}
+.check-grey {
+    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(166deg)
+        brightness(145%) contrast(80%);
+}
+
+/* --------------------------------------------------------- */
+/* MODAL */
+#myModal {
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: min-content;
+    height: min-content;
+    align-self: center;
+    justify-self: center;
+    /* alignment */
+    display: none;
+    justify-content: center;
+    align-items: center;
+    /* reseting dialog native settings */
+    background-color: transparent;
+    border: 0;
+    max-width: none;
+    max-height: none;
+    margin: 0;
+    padding: 0;
+}
+dialog::backdrop {
+    background-color: black;
+    opacity: 0.5;
+}
+.modal-title-bar {
+    background-color: var(--lib-blue);
+    position: relative;
+    top: 40px;
+    height: 40px;
+    width: 300px;
+    border-radius: 10px 10px 0 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    color: white;
+}
+.modal-title-bar > span:nth-of-type(1) {
+    font-size: 1.15rem;
+    font-weight: 500;
+}
+.formNewBook {
+    background-color: white;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 50px 20px 20px 20px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 5px rgb(128, 128, 128);
+}
+.formNewBook > div {
+    display: flex;
+    justify-content: space-between;
+}
+#bTitle,
+#bAuthor,
+#bPages,
+#bRead {
+    border: 1px solid rgb(196, 196, 196);
+}
+#bRegister,
+#bCancel {
+    border-width: 0;
+    border-radius: 5px;
+    background-color: var(--lib-blue);
+    padding: 10px 0;
+    color: white;
+    font-weight: 500;
+    cursor: pointer;
+    width: 120px;
+}
+#bRegister:hover,
+#bRegister:focus,
+#bCancel:hover,
+#bCancel:focus {
+    transform: translate(-1px, -1px);
+}
+#bRegister:active,
+#bCancel:active {
+    transform: translate(1px, 1px);
+}
+.close {
+    font-size: 2rem;
+    cursor: pointer;
+}
+#formBtns {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
